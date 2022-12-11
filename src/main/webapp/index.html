@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>The Solar Labs</title>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+ <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+<style type="text/css">
+.selectt{
+	display:none;
+}
+</style>
+
+</head>
+<body>
+<div class="container">
+<label><input type="checkbox"name="years"value="container1">2021</label><br>
+<label><input type="checkbox"name="years"value="container2">2022</label><br>
+<label><input type="checkbox"name="years"value="container3">2023</label><br>
+
+</div>
+<div class="container1 selectt">
+<select id="year1" onchange="GetSelectedTextValue(this)">
+  <option value="0">Choose</option>
+  <option value="1">Jan-Apr</option>
+  <option value="2">May-Aug</option>
+  <option value="3">Sep-Dec</option>
+</select><br>
+<form id="txtComments1"style="display: none;>
+  <input type="text" ><br><br><br>
+  Jan:<input type="number"class="disable_filed"value="0" ><br><br>
+  Feb:<input type="number"class="disable_filed"value="0" ><br><br>
+  Mar:<input type="number"class="disable_filed"value="0" ><br><br>
+  Apr:<input type="number"class="disable_filed"value="0" ><br><br>
+  <input type="submit"value=Calculate >
+  <input type="reset" >
+</form>
+<form id="txtComments2"style="display: none;>
+  <input type="text" ><br><br><br>
+  May:<input type="number"class="disable_filed"placeholder="0" ><br><br>
+  Jun:<input type="number"class="disable_filed"placeholder="0" ><br><br>
+ July:<input type="number"class="disable_filed"placeholder="0" ><br><br>
+  Aug:<input type="number"class="disable_filed"placeholder="0" ><br><br>
+  <input type="submit"value="Calculate" >
+  <input type="reset" >
+</form>
+<form id="txtComments3"style="display: none;>
+  <input type="text" ><br><br><br>
+ Sept:<input type="number"class="disable_filed"value="0" ><br><br>
+  Oct:<input type="number"class="disable_filed"value="0" ><br><br>
+  Nov:<input type="number"class="disable_filed"value="0" ><br><br>
+Dec:<input type="number"class="disable_filed" value="0"><br><br>
+  <input type="submit"value="Calculate" >
+  <input type="reset" >
+</form>
+</div>
+<div class="container2 selectt">
+<select id="year2" onchange="GetSelectedTextValue1(this)">
+  <option value="0">Choose</option>
+  <option value="4">Jan-Apr</option>
+  <option value="5">May-Aug</option>
+  <option value="6">Sep-Dec</option>
+</select>
+<form id="txtComments4"style="display: none;>
+  <input type="text" ><br><br><br>
+  Jan:<input type="number"class="disable_filed"value="0" ><br><br>
+  Feb:<input type="number"class="disable_filed"value="0" ><br><br>
+  Mar:<input type="number"class="disable_filed"value="0" ><br><br>
+  Apr:<input type="number"class="disable_filed" value="0"><br><br>
+  <input type="submit"value="Calculate" >
+  <input type="reset" >
+</form>
+<form id="txtComments5"style="display: none;>
+  <input type="text" ><br><br><br>
+  May:<input type="number"class="disable_filed"value="0" ><br><br>
+  Jun:<input type="number"class="disable_filed"value="0" ><br><br>
+ July:<input type="number"class="disable_filed" value="0"><br><br>
+  Aug:<input type="number"class="disable_filed" value="0"><br><br>
+  <input type="submit"value="Calculate" >
+  <input type="reset" >
+</form>
+<form id="txtComments6"style="display: none;>
+  <input type="text" ><br><br><br>
+ Sept:<input type="number"class="disable_filed"value="0" ><br><br>
+  Oct:<input type="number"class="disable_filed"value="0" ><br><br>
+  Nov:<input type="number"class="disable_filed"value="0" ><br><br>
+Dec:<input type="number" class="disable_filed"value="0"><br><br>
+  <input type="submit"value="Calculate" >
+  <input type="reset" >
+</form>
+</div>
+<div class="container3 selectt">
+<select id="year3" onchange="GetSelectedTextValue2(this)">
+  <option value="0">Choose</option>
+  <option value="7">Jan-Apr</option>
+  <option value="8">May-Aug</option>
+  <option value="9">Sep-Dec</option>
+</select>
+<form id="txtComments7"style="display: none;>
+  <input type="text" ><br><br><br>
+  Jan:<input type="number"class="disable_filed"value="0" ><br><br>
+  Feb:<input type="number"class="disable_filed"value="0" ><br><br>
+  Mar:<input type="number"class="disable_filed"value="0" ><br><br>
+  Apr:<input type="number"class="disable_filed" value="0"><br><br>
+  <input type="submit"value="Calculate" >
+  <input type="reset" >
+</form>
+<form id="txtComments8"style="display: none;>
+  <input type="text" ><br><br><br>
+  May:<input type="number" class="disable_filed"value="0"><br><br>
+  Jun:<input type="number" class="disable_filed"value="0"><br><br>
+ July:<input type="number" class="disable_filed"value="0"><br><br>
+  Aug:<input type="number" class="disable_filed"value="0"><br><br>
+  <input type="submit"value="Calculate" >
+  <input type="reset" >
+</form>
+<form id="txtComments9"style="display: none;>
+ <input type="text" ><br><br><br>
+ Sept:<input type="number"class="disable_filed" value="0"><br><br>
+  Oct:<input type="number" class="disable_filed"value="0"><br><br>
+  Nov:<input type="number" class="disable_filed"value="0"><br><br>
+Dec:<input type="number"class="disable_filed" value="0"><br><br>
+  <input type="submit"value="Calculate" >
+  <input type="reset" >
+</form>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('input[type="checkbox"]').click(function() {
+        var inputValue = $(this).attr("value");
+        $("." + inputValue).toggle();
+    });
+});
+</script>
+<script>
+  $(document).ready(function(){
+	  $('.disable_filed').on('input',function(){
+		  if($(this).val().length)
+			  $('.disable_filed').not(this).prop('disabled',true);
+		  else
+			  $('.disable_filed').removeAtt('disabled');
+	  });
+  });
+  </script>
+</body>
+</html>
